@@ -63,11 +63,10 @@ export default function TrainerDashboard() {
           .eq('trainer_id', profile.id),
 
         supabase
-          .from('payments')
-          .select('amount')
+          .from('earnings_ledger')
+          .select('net_amount')
           .eq('trainer_id', profile.id)
-          .eq('status', 'succeeded')
-          .gte('created_at', new Date(new Date().setDate(1)).toISOString()),
+          .gte('created_at', new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()),
       ])
 
       setUpcomingBookings(bookingsRes.data || [])
@@ -83,7 +82,7 @@ export default function TrainerDashboard() {
         activeListings: listingsRes.data?.length || 0,
         pendingBookings: (bookingsRes.data || []).filter(b => b.status === 'pending').length,
         totalClients: new Set((bookingsRes.data || []).map(b => b.client_id)).size,
-        monthlyEarnings: (paymentsRes.data || []).reduce((sum, p) => sum + (p.trainer_payout || 0), 0),
+        monthlyEarnings: (paymentsRes.data || []).reduce((sum, p) => sum + (p.net_amount || 0), 0),
       })
     } catch (error) {
       console.error('Dashboard load error:', error)

@@ -92,42 +92,6 @@ function AppRoutes() {
         </ProtectedRoute>
       } />
 
-      <Route path="/trainer/:id" element={
-        <ProtectedRoute>
-          <TrainerProfilePage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/book/:trainerId/:listingId?" element={
-        <ProtectedRoute roles={['client']}>
-          <BookingPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/messages" element={
-        <ProtectedRoute>
-          <MessagesPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/messages/:conversationId" element={
-        <ProtectedRoute>
-          <ConversationPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/profile" element={
-        <ProtectedRoute>
-          <ProfilePage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/settings" element={
-        <ProtectedRoute>
-          <SettingsPage />
-        </ProtectedRoute>
-      } />
-
       <Route path="/trainer/onboarding" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerOnboardingPage />
@@ -173,6 +137,12 @@ function AppRoutes() {
       <Route path="/trainer/income" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerIncomePage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/trainer/:id" element={
+        <ProtectedRoute>
+          <TrainerProfilePage />
         </ProtectedRoute>
       } />
 
