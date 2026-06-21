@@ -92,6 +92,36 @@ function AppRoutes() {
         </ProtectedRoute>
       } />
 
+      <Route path="/book/:trainerId/:listingId?" element={
+        <ProtectedRoute roles={['client']}>
+          <BookingPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/messages" element={
+        <ProtectedRoute>
+          <MessagesPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/messages/:conversationId" element={
+        <ProtectedRoute>
+          <ConversationPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/profile" element={
+        <ProtectedRoute>
+          <ProfilePage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/settings" element={
+        <ProtectedRoute>
+          <SettingsPage />
+        </ProtectedRoute>
+      } />
+
       <Route path="/trainer/onboarding" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerOnboardingPage />
@@ -104,12 +134,6 @@ function AppRoutes() {
         </ProtectedRoute>
       } />
 
-      <Route path="/trainer/listings" element={
-        <ProtectedRoute roles={['trainer']}>
-          <TrainerListingsPage />
-        </ProtectedRoute>
-      } />
-
       <Route path="/trainer/listings/new" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerListingFormPage />
@@ -119,6 +143,12 @@ function AppRoutes() {
       <Route path="/trainer/listings/:id" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerListingFormPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/trainer/listings" element={
+        <ProtectedRoute roles={['trainer']}>
+          <TrainerListingsPage />
         </ProtectedRoute>
       } />
 
