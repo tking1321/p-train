@@ -18,6 +18,7 @@ import SettingsPage from './pages/SettingsPage'
 import TrainerOnboardingPage from './pages/TrainerOnboardingPage'
 import TrainerProfileEditPage from './pages/TrainerProfileEditPage'
 import TrainerListingsPage from './pages/TrainerListingsPage'
+import TrainerListingFormPage from './pages/TrainerListingFormPage'
 import TrainerAvailabilityPage from './pages/TrainerAvailabilityPage'
 import TrainerCalendarPage from './pages/TrainerCalendarPage'
 import TrainerIncomePage from './pages/TrainerIncomePage'
@@ -142,6 +143,18 @@ function AppRoutes() {
       <Route path="/trainer/listings" element={
         <ProtectedRoute roles={['trainer']}>
           <TrainerListingsPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/trainer/listings/new" element={
+        <ProtectedRoute roles={['trainer']}>
+          <TrainerListingFormPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/trainer/listings/:id" element={
+        <ProtectedRoute roles={['trainer']}>
+          <TrainerListingFormPage />
         </ProtectedRoute>
       } />
 
