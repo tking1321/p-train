@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* Brand */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+
+  /* Neutral ramp */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+  --color-neutral-950: #030712;
+
+  /* Semantic light */
+  --color-bg: #ffffff;
+  --color-surface: #f9fafb;
+  --color-surface-alt: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-accent: #0ea5e9;
+  --color-accent-hover: #0284c7;
+
+  /* Legacy aliases for existing components */
+  --color-dark-bg: #000000;
+  --color-dark-surface: #0f0f0f;
+  --color-dark-surface-2: #1a1a1a;
+  --color-dark-border: #2a2a2a;
+  --color-dark-hover: #1f1f1f;
+  --color-light-bg: #ffffff;
+  --color-light-surface: #f9fafb;
+  --color-light-surface-2: #f3f4f6;
+  --color-light-border: #e5e7eb;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@source "../src/**/*.{js,jsx,ts,tsx}";
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: none;
+}
+
+#root {
+  height: 100%;
+}
+
+/* ── Light mode (default) ──────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f9fafb;
+  --surface-alt: #f3f4f6;
+  --border: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --accent: #0ea5e9;
+  --accent-hover: #0284c7;
+  --card-bg: #ffffff;
+  --input-bg: #f9fafb;
+  --btn-primary-bg: #111827;
+  --btn-primary-text: #ffffff;
+  --msg-own-bg: #111827;
+  --msg-own-text: #ffffff;
+  --msg-other-bg: #f3f4f6;
+  --msg-other-text: #111827;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* ── Dark mode ─────────────────────────────────────────────── */
+.dark, html.dark {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0f0f0f;
+  --surface-alt: #1a1a1a;
+  --border: #2a2a2a;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --card-bg: #0f0f0f;
+  --input-bg: #111111;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --msg-own-bg: #ffffff;
+  --msg-own-text: #000000;
+  --msg-other-bg: #1a1a1a;
+  --msg-other-text: #f9fafb;
+}
+
+.dark body, html.dark body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ── Mobile safe areas ─────────────────────────────────────── */
+.safe-area-top { padding-top: env(safe-area-inset-top); }
+.safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+.safe-area-left { padding-left: env(safe-area-inset-left); }
+.safe-area-right { padding-right: env(safe-area-inset-right); }
+.capacitor-ios .navbar-fixed { padding-top: env(safe-area-inset-top); }
+.keyboard-open { padding-bottom: env(keyboard-inset-height, 0); }
+
+input, textarea, select { font-size: 16px !important; }
+
+/* ── Utility classes using CSS vars ────────────────────────── */
+.bg-surface { background-color: var(--surface); }
+.bg-surface-alt { background-color: var(--surface-alt); }
+.bg-card { background-color: var(--card-bg); }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted-color { color: var(--text-muted); }
+.border-theme { border-color: var(--border); }
+.input-theme { background-color: var(--input-bg); border-color: var(--border); color: var(--text-primary); }
+.btn-primary { background-color: var(--btn-primary-bg); color: var(--btn-primary-text); }
+
+/* ── Chart theme fixes ─────────────────────────────────────── */
+.recharts-cartesian-axis-tick-value { fill: var(--text-secondary) !important; }
+.recharts-legend-item-text { color: var(--text-secondary) !important; }
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── Calendar ──────────────────────────────────────────────── */
+.cal-day-available {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.cal-day-booked {
+  background-color: #0ea5e910;
+  border: 1px solid #0ea5e940;
+  color: var(--accent);
+}
+.cal-day-blocked {
+  background-color: var(--surface-alt);
+  color: var(--text-muted);
+}

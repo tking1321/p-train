@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#000000"/>
+  <text x="512" y="380" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="320" font-weight="700" fill="#ffffff">T</text>
+  <path d="M512 680 L340 840 L440 840 L440 940 L584 940 L584 840 L684 840 Z" fill="#ffffff"/>
+</svg>

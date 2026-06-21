@@ -1,0 +1,187 @@
+export const trainers = [
+  {
+    id: 'trainer-1',
+    email: 'alex@test.com',
+    name: 'Alex Rivera',
+    role: 'trainer',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Alex',
+    specialty: ['Strength', 'Conditioning'],
+    bio: 'Certified personal trainer with 8+ years of experience helping clients build strength and achieve their fitness goals. I specialize in functional training and corrective exercise.',
+    certifications: ['NASM-CPT', 'CSCS', 'FMS Level 2'],
+    location: 'Los Angeles, CA',
+    yearsExperience: 8,
+    rating: 4.9,
+    reviewCount: 47,
+    verified: true,
+    programs: [
+      {
+        id: 'prog-1',
+        trainerId: 'trainer-1',
+        name: 'Strength Foundation',
+        description: 'A comprehensive 12-week program designed to build a solid strength foundation. Perfect for beginners looking to learn proper form and progressive overload.',
+        price: 79,
+        type: 'monthly',
+        included: ['4 workouts per week', 'Video demonstrations', 'Nutrition guide', 'Weekly check-ins', 'Form feedback'],
+      },
+      {
+        id: 'prog-2',
+        trainerId: 'trainer-1',
+        name: 'Advanced Powerlifting',
+        description: 'Take your lifting to the next level with this intensive program focused on the squat, bench, and deadlift.',
+        price: 149,
+        type: 'one-time',
+        included: ['16-week program', 'Technique breakdowns', 'Competition prep guide', 'Peak week protocol'],
+      },
+    ],
+  },
+  {
+    id: 'trainer-2',
+    email: 'jordan@test.com',
+    name: 'Jordan Lee',
+    role: 'trainer',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan',
+    specialty: ['HIIT', 'Cardio'],
+    bio: 'High-energy trainer passionate about helping clients burn fat and build endurance. My workouts are designed to maximize results in minimal time.',
+    certifications: ['ACE-CPT', 'HIIT Specialist'],
+    location: 'Miami, FL',
+    yearsExperience: 5,
+    rating: 4.7,
+    reviewCount: 32,
+    verified: true,
+    programs: [
+      {
+        id: 'prog-3',
+        trainerId: 'trainer-2',
+        name: 'Burn & Build',
+        description: 'High-intensity interval training designed to torch calories and build lean muscle. 20-30 minute sessions that fit your busy schedule.',
+        price: 59,
+        type: 'monthly',
+        included: ['5 HIIT sessions/week', 'Cardio protocols', 'Recovery stretches', 'Progress tracking'],
+      },
+    ],
+  },
+  {
+    id: 'trainer-3',
+    email: 'sam@test.com',
+    name: 'Sam Chen',
+    role: 'trainer',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sam',
+    specialty: ['Yoga', 'Mobility'],
+    bio: 'RYT-500 certified yoga instructor and mobility specialist. I help clients improve flexibility, reduce pain, and find balance through mindful movement.',
+    certifications: ['RYT-500', 'FRCms', 'Massage Therapist'],
+    location: 'Seattle, WA',
+    yearsExperience: 10,
+    rating: 4.8,
+    reviewCount: 56,
+    verified: true,
+    programs: [
+      {
+        id: 'prog-4',
+        trainerId: 'trainer-3',
+        name: 'Yoga Flow Basics',
+        description: 'Learn the fundamentals of vinyasa yoga with this beginner-friendly program. Build flexibility and mindfulness.',
+        price: 49,
+        type: 'one-time',
+        included: ['20 guided flows', 'Breathwork tutorials', 'Meditation guide', 'Pose breakdowns'],
+      },
+      {
+        id: 'prog-5',
+        trainerId: 'trainer-3',
+        name: 'Mobility Mastery',
+        description: 'Improve your range of motion and reduce stiffness with targeted mobility routines.',
+        price: 39,
+        type: 'monthly',
+        included: ['Daily mobility flows', 'Joint-specific routines', 'Pre-workout prep', 'Recovery sessions'],
+      },
+      {
+        id: 'prog-6',
+        trainerId: 'trainer-3',
+        name: 'Advanced Flexibility',
+        description: 'Push your flexibility to new limits with this intensive stretching program.',
+        price: 199,
+        type: 'one-time',
+        included: ['8-week program', 'Progressive splits training', 'Back bending series', 'Partner stretches guide'],
+      },
+    ],
+  },
+  {
+    id: 'trainer-4',
+    email: 'taylor@test.com',
+    name: 'Taylor Brooks',
+    role: 'trainer',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Taylor',
+    specialty: ['Nutrition', 'Weight Loss'],
+    bio: 'Registered dietitian and certified nutrition coach. I create sustainable eating plans that help you reach your goals without restrictive dieting.',
+    certifications: ['RD', 'CSSD', 'Precision Nutrition Level 2'],
+    location: 'Austin, TX',
+    yearsExperience: 6,
+    rating: 4.6,
+    reviewCount: 28,
+    verified: false,
+    programs: [
+      {
+        id: 'prog-7',
+        trainerId: 'trainer-4',
+        name: 'Nutrition Foundations',
+        description: 'Learn the fundamentals of proper nutrition and build healthy eating habits that last.',
+        price: 89,
+        type: 'monthly',
+        included: ['Custom meal plans', 'Macro tracking guidance', 'Weekly adjustments', 'Recipe library', 'Grocery guides'],
+      },
+      {
+        id: 'prog-8',
+        trainerId: 'trainer-4',
+        name: 'Complete Transformation',
+        description: 'A comprehensive 6-month program combining nutrition coaching, habit building, and lifestyle optimization.',
+        price: 299,
+        type: 'one-time',
+        included: ['Initial assessment', 'Custom macros', '24/7 support', 'Bi-weekly calls', 'Maintenance plan'],
+      },
+    ],
+  },
+]
+
+export const reviews = {
+  'trainer-1': [
+    { id: 'r1', clientId: 'client-1', clientName: 'Morgan Smith', rating: 5, text: 'Alex completely transformed my approach to fitness. The personalized attention and detailed feedback made all the difference.', date: '2024-01-15' },
+    { id: 'r2', clientId: 'client-2', clientName: 'Casey Johnson', rating: 5, text: 'Best investment I\'ve made in myself. Alex is knowledgeable, patient, and genuinely cares about your progress.', date: '2024-01-10' },
+    { id: 'r3', clientId: 'client-3', clientName: 'Riley Davis', rating: 4, text: 'Great program with solid progressions. Would recommend to anyone starting their strength journey.', date: '2024-01-05' },
+    { id: 'r4', clientId: 'client-4', clientName: 'Quinn Wilson', rating: 5, text: 'Alex helped me hit PRs I never thought possible. The programming is top-notch.', date: '2023-12-20' },
+    { id: 'r5', clientId: 'client-5', clientName: 'Jamie Brown', rating: 5, text: 'The form corrections alone were worth it. Very thorough and professional trainer.', date: '2023-12-15' },
+  ],
+  'trainer-2': [
+    { id: 'r6', clientId: 'client-2', clientName: 'Casey Johnson', rating: 5, text: 'Jordan\'s HIIT workouts are INTENSE but so effective! I\'ve seen amazing results.', date: '2024-01-12' },
+    { id: 'r7', clientId: 'client-4', clientName: 'Quinn Wilson', rating: 4, text: 'Love the quick, effective workouts. Perfect for my busy schedule.', date: '2024-01-08' },
+    { id: 'r8', clientId: 'client-6', clientName: 'Avery Martin', rating: 5, text: 'Finally found a cardio routine I actually enjoy. Jordan keeps it fun!', date: '2024-01-02' },
+  ],
+  'trainer-3': [
+    { id: 'r9', clientId: 'client-1', clientName: 'Morgan Smith', rating: 5, text: 'Sam\'s yoga flows have helped my back pain tremendously. So grateful for this program.', date: '2024-01-18' },
+    { id: 'r10', clientId: 'client-3', clientName: 'Riley Davis', rating: 5, text: 'The mobility work has been a gamechanger for my recovery between lifting sessions.', date: '2024-01-14' },
+    { id: 'r11', clientId: 'client-5', clientName: 'Jamie Brown', rating: 4, text: 'Great instructions and modifications. The video demonstrations are helpful.', date: '2024-01-09' },
+    { id: 'r12', clientId: 'client-7', clientName: 'Blake Thompson', rating: 5, text: 'Sam helped me finally touch my toes after years of tightness!', date: '2024-01-04' },
+    { id: 'r13', clientId: 'client-8', clientName: 'Parker Garcia', rating: 5, text: 'The combination of yoga and mobility work is perfect. Highly recommend.', date: '2023-12-28' },
+  ],
+  'trainer-4': [
+    { id: 'r14', clientId: 'client-2', clientName: 'Casey Johnson', rating: 5, text: 'Taylor\'s nutrition advice finally helped me understand macros without being obsessive.', date: '2024-01-16' },
+    { id: 'r15', clientId: 'client-6', clientName: 'Avery Martin', rating: 4, text: 'Good program with practical meal suggestions. Lost 15 lbs so far!', date: '2024-01-11' },
+    { id: 'r16', clientId: 'client-9', clientName: 'Drew White', rating: 5, text: 'Sustainable approach to nutrition that actually works long-term.', date: '2024-01-06' },
+  ],
+}
+
+export const mockClients = [
+  { id: 'client-1', email: 'client1@test.com', password: 'password123', name: 'Morgan Smith', role: 'client', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Morgan' },
+  { id: 'client-2', email: 'client2@test.com', password: 'password123', name: 'Casey Johnson', role: 'client', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Casey' },
+]
+
+export const mockPurchases = [
+  { id: 'purch-1', clientId: 'client-1', trainerId: 'trainer-1', programId: 'prog-1', programName: 'Strength Foundation', trainerName: 'Alex Rivera', type: 'monthly', price: 79, date: '2024-01-01' },
+  { id: 'purch-2', clientId: 'client-1', trainerId: 'trainer-3', programId: 'prog-4', programName: 'Yoga Flow Basics', trainerName: 'Sam Chen', type: 'one-time', price: 49, date: '2024-01-10' },
+]
+
+export const mockMessages = [
+  { id: 'msg-1', senderId: 'client-1', receiverId: 'trainer-1', text: 'Hi Alex! I just started your program and had a question about the squat progression.', timestamp: '2024-01-15T10:30:00', read: true },
+  { id: 'msg-2', senderId: 'trainer-1', receiverId: 'client-1', text: 'Hey Morgan! Great to hear you\'re getting started. What\'s your question?', timestamp: '2024-01-15T11:15:00', read: true },
+  { id: 'msg-3', senderId: 'client-1', receiverId: 'trainer-1', text: 'Should I be increasing weight each week or stick with the same until I hit the rep target?', timestamp: '2024-01-15T11:45:00', read: false },
+]
+
+export const specialties = ['Strength', 'Conditioning', 'HIIT', 'Cardio', 'Yoga', 'Mobility', 'Nutrition', 'Weight Loss', 'Powerlifting', 'CrossFit', 'Pilates', 'Meditation']
